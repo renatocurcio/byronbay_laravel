@@ -1,0 +1,41 @@
+* {
+    font-family: Andale Mono, monospace !important;
+  }
+  
+  header {
+    background-color: rgb(250, 92, 5);
+    overflow: hidden;
+    position: relative;
+    font-weight: bold;
+    }
+  
+  h2 {
+    color: rgb(250, 92, 5);
+    font-weight: bold !important;
+  }
+  
+  h3 {
+    color: rgb(250, 92, 5);
+    font-weight: bold !important;
+  }
+  
+  footer {
+    background-color: rgb(250, 92, 5);
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  .btn {
+    background-color: rgb(250, 92, 5) !important;
+    color: white !important;
+  }
+  
+  a {
+    color: rgb(250, 92, 5) !important;
+    font-weight: bold;
+  }
+  
