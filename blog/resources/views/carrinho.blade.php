@@ -52,7 +52,7 @@
         </div>
         <hr>
         <h4 class="mb-3 font-weight-bold">PAGAMENTO</h4>
-        <form class="" action="ped_ok.php" method="post">
+        <form class="" action="ped_ok" method="post">
           <div class="d-block my-3">
             <div class="custom-control custom-radio">
               <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -73,7 +73,7 @@
               </div>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="cc-number">Número do cartão</label>
+             <a><label for="cc-number">Número do cartão</label>
               <input type="text" class="form-control" id="cc-number" placeholder="" required>
               <div class="invalid-feedback">
                 Obrigatótio
@@ -97,7 +97,7 @@
             </div>
           </div>
           <div class="row float-right">
-            <button type="submit" class="btn btn-lg">Pagar</button>
+            <button>class="nav-link" href="ped_ok" >PAGAR</a></button>
           </div>
         </form>
       </div>

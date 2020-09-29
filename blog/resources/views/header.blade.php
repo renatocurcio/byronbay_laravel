@@ -51,7 +51,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link  font-weight-normal" >CADASTRE-SE</a>
+            <a class="nav-link  font-weight-normal" href="cadastro" >CADASTRE-SE</a>
           </li>
         </ul>
       </nav>

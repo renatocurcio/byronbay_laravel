@@ -23,15 +23,16 @@
       <div class="col-4">
         <h3>R$ 19,90</h3>
         <hr>
-        <form class="" href="carrinho" method="post">
+        
                  <label>Quantidade:</label>
           <input class="btn" type="button" id="plus" value='-' onclick="process(-1)" />
           <input id="quant" name="quant" class="text-center" size="1" type="text" value="1" maxlength="5" />
           <input class="btn" type="button" id="minus" value='+' onclick="process(1)">
           <div class="row mt-5 justify-content-end">
-            <button class="btn btn-lg" type="submit" name="button">Comprar</button>
+          
+            <button><a class="nav-link" href="carrinho" >COMPRAR</a></button>
           </div>
-        </form>
+      
       </div>
     </div>
   </div>

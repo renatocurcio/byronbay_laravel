@@ -53,3 +53,15 @@ Route::get('/pedidos', function () {
 Route::get('/produto', function () {
     return view('produto');
 });
+Route::get('/ped_ok', function () {
+    return view('ped_ok');
+});
+Route::get('/cadastro', function () {
+    return view('cadastro');
+});
+Route::get('/cadastro_cliente', function () {
+    return view('cadastro_cliente');
+});
+Route::get('/cad_ok', function () {
+    return view('cad_ok');
+});
