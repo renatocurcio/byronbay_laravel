@@ -12,15 +12,15 @@
       <nav class="navbar nav-expand-lg">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link active" href="home.php">BYRON BAY</a>
+            <a class="nav-link active" href="home">BYRON BAY</a>
           </li>
         </ul>
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="quem_somos.php">QUEM SOMOS</a>
+            <a class="nav-link" href="quem_somos">QUEM SOMOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fale_conosco.php">FALE CONOSCO</a>
+            <a class="nav-link" href="fale_conosco">FALE CONOSCO</a>
           </li>
         </ul>
         <ul class="nav justify-content-end">

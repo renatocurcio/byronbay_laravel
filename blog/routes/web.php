@@ -65,3 +65,21 @@ Route::get('/cadastro_cliente', function () {
 Route::get('/cad_ok', function () {
     return view('cad_ok');
 });
+Route::get('/tipos', function () {
+    return view('tipos');
+});
+Route::get('/dicas', function () {
+    return view('dicas');
+});
+Route::get('/historia', function () {
+    return view('historia');
+});
+Route::get('/quem_somos', function () {
+    return view('quem_somos');
+});
+Route::get('/fale_conosco', function () {
+    return view('fale_conosco');
+});
+Route::get('/cadastro_produtores', function () {
+    return view('cadastro_produtores');
+});
