@@ -21,6 +21,26 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/tipos', function () {
+    return view('infos/tipos');
+});
+
+Route::get('/dicas', function () {
+    return view('infos/dicas');
+});
+
+Route::get('/historia', function () {
+    return view('infos/historia');
+});
+
+Route::get('/quem_somos', function () {
+    return view('infos/quem_somos');
+});
+
+Route::get('/fale_conosco', function () {
+    return view('infos/fale_conosco');
+});
+
 Route::get('/produtos', function () {
     return view('produtos');
 });
@@ -65,21 +85,7 @@ Route::get('/cadastro_cliente', function () {
 Route::get('/cad_ok', function () {
     return view('cad_ok');
 });
-Route::get('/tipos', function () {
-    return view('tipos');
-});
-Route::get('/dicas', function () {
-    return view('dicas');
-});
-Route::get('/historia', function () {
-    return view('historia');
-});
-Route::get('/quem_somos', function () {
-    return view('quem_somos');
-});
-Route::get('/fale_conosco', function () {
-    return view('fale_conosco');
-});
+
 Route::get('/cadastro_produtores', function () {
     return view('cadastro_produtores');
 });

@@ -12,16 +12,16 @@
       <nav class="navbar nav-expand-lg">
         <ul class="nav">
           <li class="nav-item">
-         
+
             <a class="nav-link active" href= "home"><img src="logo.png" alt="logo" width="200w"></a>
           </li>
         </ul>
         <ul class="nav justify-content-center">
           <li class="nav-item">
-            <a class="nav-link"  href="produtos"  >PRODUTOS</a>
+            <a class="nav-link"  href="produtos" style="color: white; font-weight: bold">PRODUTOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="produtores" >PRODUTORES</a>
+            <a class="nav-link" href="produtores" style="color: white; font-weight: bold">PRODUTORES</a>
           </li>
         </ul>
         <ul class="nav justify-content-end">
@@ -51,7 +51,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link  font-weight-normal" href="cadastro" >CADASTRE-SE</a>
+            <a class="nav-link  font-weight-normal" href="cadastro" style="color: white; font-weight: bold">CADASTRE-SE</a>
           </li>
         </ul>
       </nav>

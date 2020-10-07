@@ -70,7 +70,7 @@
       </div>
     </div>
     <br>
-    <a href="produtos" class="float-right">Ver todos os produtos</a>
+    <a href="produtos" class="float-right" style="color: black; font-weight: bold">Ver todos os produtos</a>
     <br>
     <hr>
     <h2 class="font-weight-bold">NOSSOS PRODUTORES</h2>
@@ -90,11 +90,11 @@
           <div class="col-4">
             <a href="produtor">
               <img src="prod3.jpg" alt="" width="100%" height="200w"></a>
-              <h5 class="text-center font-weight-bold mt-1">Paulãssssssssso</h5>
+              <h5 class="text-center font-weight-bold mt-1">Paulão</h5>
               <h5 class="text-center">Curitiba/PR</h5>
             </div>
           </div>
-          <a href="produtores" class="float-right">Ver todos os produtores</a>
+          <a href="produtores" class="float-right" style="color: black; font-weight: bold">Ver todos os produtores</a>
           <br>
           <hr>
           <div class="row">
