@@ -83,3 +83,8 @@ Route::get('/fale_conosco', function () {
 Route::get('/cadastro_produtores', function () {
     return view('cadastro_produtores');
 });
+Route::get('/meus_produtos', function () {
+    return view('meus_produtos');
+});
+Route::get('/cadastro_produtos', 'produtoController@cadastrarProduto');
+Route::post('/cadastro_produtos', 'produtoController@cadastrarProduto');
