@@ -12,12 +12,12 @@
     <br>
     <div class="row justify-content-center mt-1">
       <div class="col-5">
-        <a href="cadastro_cliente">
+        <a href="produto">
           <img src="comprador.jpg" alt="" width="100%" height="300w"></a>
           <h3 class="text-center">COMPRADOR</h3>
         </div>
         <div class="col-5">
-          <a href="cadastro_produtores">
+          <a href="produtores/cadastro">
             <img src="produtor.jpg" alt="" width="100%" height="300w"></a>
             <h3 class="text-center">PRODUTOR</h3>
           </div>

@@ -13,7 +13,7 @@
         <ul class="nav">
           <li class="nav-item">
 
-            <a class="nav-link active" href= "home"><img src="logo.png" alt="logo" width="200w"></a>
+            <a class="nav-link active" href= "../home"><img src="../logo.png" alt="logo" width="200w"></a>
           </li>
         </ul>
         <ul class="nav justify-content-center">
@@ -35,7 +35,7 @@
           </li> -->
 
           <li class="nav-item ">
-            <a href="carrinho" class="navbar-nav pl-2 pr-2 mx-1">
+            <a href="../carrinho" class="navbar-nav pl-2 pr-2 mx-1">
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-basket-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
               </svg>
@@ -43,7 +43,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="login" class="navbar-nav pl-2 pr-2 mx-1">
+            <a href="../login" class="navbar-nav pl-2 pr-2 mx-1">
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-door-open-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2v13h1V2.5a.5.5 0 0 0-.5-.5H11zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
               </svg>
@@ -51,7 +51,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link  font-weight-normal" href="cadastro" style="color: white; font-weight: bold">CADASTRE-SE</a>
+            <a class="nav-link  font-weight-normal" href="../cadastro" style="color: white; font-weight: bold">CADASTRE-SE</a>
           </li>
         </ul>
       </nav>

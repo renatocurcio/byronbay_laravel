@@ -10,4 +10,9 @@ class product extends Model
     public $table = "products";
     public $primaryKey = "id";
     public $timestamps = false;
-  }
+
+    public function seller()
+    {
+      return $this->belongsTo("App\seller","id");
+    }
+}

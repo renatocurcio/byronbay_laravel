@@ -11,12 +11,10 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <h2 class="text-center">Meus produtos</h2>
-        <hr>
-        <a href="cadastro_produtos.php" class="float-right">Cadastrar novo produto</a>
+        <a href="/produtos/cadastro" class="float-right font-weight-bold" style="color:black;">Cadastrar novo produto</a>
         <table class="table text-center">
           <thead>
             <tr class="font-weight-bold">
-              <th scope="col">ID</th>
               <th scope="col">Produto</th>
               <th scope="col">Preço</th>
               <th scope="col"></th>
@@ -24,14 +22,18 @@
             </tr>
           </thead>
           <tbody>
-            <td>1</td>
-            <td>Café blablabla</td>
-            <td>R$19,90</td>
-            <td><a href="editar_produtos.php">Editar</a></td>
-            <td><a href="#">Excluir</a></td>
+            @foreach ($produtos as $produto)
+              <tr>
+                <td>{{$produto->productName}}</td>
+                <td>R$ {{$produto->price}}</td>
+                <td><a class="font-weight-bold" style="color:black" href="/produtos/editar/{{$produto->id}}">Editar</a></td>
+                <td><a class="font-weight-bold" style="color:black" href="/deletar/{{$produto->id}}">Excluir</a></td>
+              </tr>
+            @endforeach
           </tbody>
         </table>
-        <a href="dados_produtor.php" class="btn" type="button" name="button">Voltar</a>
+        <!-- {{$produtos->links()}} -->
+        <a href="/dados_produtor" class="btn" type="button" name="button">Voltar</a>
       </div>
     </div>
   </div>
@@ -48,8 +50,6 @@
           </div>
         @endif
       @endif
-
-
 
 </body>
 @include ('footer')

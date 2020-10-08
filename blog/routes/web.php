@@ -64,9 +64,7 @@ Route::get('/dados_cliente', function () {
 Route::get('/editar_clientes', function () {
     return view('editar_clientes');
 });
-Route::get('/meus_pedidos', function () {
-    return view('meus_pedidos');
-});
+
 Route::get('/pedidos', function () {
     return view('pedidos');
 });
@@ -82,15 +80,23 @@ Route::get('/cadastro', function () {
 Route::get('/cadastro_cliente', function () {
     return view('cadastro_cliente');
 });
-Route::get('/cad_ok', function () {
+Route::post('/cad_ok', function () {
     return view('cad_ok');
 });
 
-Route::get('/cadastro_produtores', function () {
-    return view('cadastro_produtores');
+Route::get('/meus_produtos', 'produtoController@listarProdutos');
+
+Route::get('/produtos/cadastro', 'produtoController@cadastrar');
+Route::post('/produtos/cadastro', 'produtoController@cadastrar');
+
+Route::get('/produtos/editar/{produto}','produtoController@editar');
+Route::post('/produtos/editar/{produto}','produtoController@atualizar');
+
+Route::get('/deletar/{produto}', 'produtoController@deletar');
+
+Route::get('/produtores/cadastro', 'produtoresController@cadastrar');
+Route::post('/produtores/cadastro', 'produtoresController@cadastrar');
+
+Route::get('/produtores/dados', function(){
+    return view('produtores.dados');
 });
-Route::get('/meus_produtos', function () {
-    return view('meus_produtos');
-});
-Route::get('/cadastro_produtos', 'produtoController@cadastrarProduto');
-Route::post('/cadastro_produtos', 'produtoController@cadastrarProduto');
