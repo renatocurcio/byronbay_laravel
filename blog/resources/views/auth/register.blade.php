@@ -1,11 +1,12 @@
 @extends('layouts.app')
-
-@section('content')
+ <img src="cafezinho.jpg" alt="padrao" width="100%" height="110w">
+ @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
+               
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -66,6 +67,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                
                             </div>
                         </div>
                     </form>

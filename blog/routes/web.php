@@ -103,6 +103,9 @@ Route::get('/produtores/dados', function(){
 Route::get('/cadastro_produtores', function () {
     return view('cadastro_produtores');
 });
+Route::get('/teste', function () {
+    return view('teste');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

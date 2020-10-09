@@ -11,7 +11,10 @@ class produtoresController extends Controller
     if ($request->isMethod('GET')){
       return view ('produtores.cadastro');
     }
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     $mensagem = [
       "required" => "O campo :attribute é obrigatório"
     ];

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+ <img src="cafezinho.jpg" alt="padrao" width="100%" height="110w">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -7,6 +7,7 @@ use App\Models\product;
 
 class produtoController extends Controller
 {
+  
     public function cadastrar (Request $request){
       if ($request->isMethod('GET')){
         return view ('produtos.cadastro');
@@ -43,6 +44,7 @@ class produtoController extends Controller
 
       // return view ("meus_produtos", ['resultado'=>$resultado]);
     }
+    
 
     public function listarProdutos(){
       $produtos = product::paginate(10);
