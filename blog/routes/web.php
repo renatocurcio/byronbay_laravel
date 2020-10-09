@@ -19,6 +19,26 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/tipos', function () {
+    return view('infos/tipos');
+});
+
+Route::get('/dicas', function () {
+    return view('infos/dicas');
+});
+
+Route::get('/historia', function () {
+    return view('infos/historia');
+});
+
+Route::get('/quem_somos', function () {
+    return view('infos/quem_somos');
+});
+
+Route::get('/fale_conosco', function () {
+    return view('infos/fale_conosco');
+});
+
 Route::get('/produtos', function () {
     return view('produtos');
 });
@@ -44,9 +64,7 @@ Route::get('/dados_cliente', function () {
 Route::get('/editar_clientes', function () {
     return view('editar_clientes');
 });
-Route::get('/meus_pedidos', function () {
-    return view('meus_pedidos');
-});
+
 Route::get('/pedidos', function () {
     return view('pedidos');
 });
@@ -62,23 +80,25 @@ Route::get('/cadastro', function () {
 Route::get('/cadastro_cliente', function () {
     return view('cadastro_cliente');
 });
-Route::get('/cad_ok', function () {
+Route::post('/cad_ok', function () {
     return view('cad_ok');
 });
-Route::get('/tipos', function () {
-    return view('tipos');
-});
-Route::get('/dicas', function () {
-    return view('dicas');
-});
-Route::get('/historia', function () {
-    return view('historia');
-});
-Route::get('/quem_somos', function () {
-    return view('quem_somos');
-});
-Route::get('/fale_conosco', function () {
-    return view('fale_conosco');
+
+Route::get('/meus_produtos', 'produtoController@listarProdutos');
+
+Route::get('/produtos/cadastro', 'produtoController@cadastrar');
+Route::post('/produtos/cadastro', 'produtoController@cadastrar');
+
+Route::get('/produtos/editar/{produto}','produtoController@editar');
+Route::post('/produtos/editar/{produto}','produtoController@atualizar');
+
+Route::get('/deletar/{produto}', 'produtoController@deletar');
+
+Route::get('/produtores/cadastro', 'produtoresController@cadastrar');
+Route::post('/produtores/cadastro', 'produtoresController@cadastrar');
+
+Route::get('/produtores/dados', function(){
+    return view('produtores.dados');
 });
 Route::get('/cadastro_produtores', function () {
     return view('cadastro_produtores');

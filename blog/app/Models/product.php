@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class product extends Model
 {
     public $table = "products";
-    public $primaryKey = "id";}
+    public $primaryKey = "id";
+    public $timestamps = false;
+
+    public function seller()
+    {
+      return $this->belongsTo("App\seller","id");
+    }
+}

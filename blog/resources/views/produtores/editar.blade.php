@@ -1,18 +1,18 @@
-@include('header')
+@include ('header')
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cadastro de produtores</title>
-  </head>
-  <body>
-<img src="cafezinho.jpg" alt="padrao" width="100%" height="110w">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-        <h2 class="text-center">Cadastro de produtor</h2>
+<head>
+  <meta charset="utf-8">
+  <title>Cadastro de produtores</title>
+</head>
+<body>
+  <img src="img/cafezinho.jpg" alt="padrao" width="100%" height="110w">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="text-center">Editar cadastro de produtor</h2>
         <hr>
-        <form action="cad_ok" method="post">
+        <form action="dados_produtor.php" method="post">
           <div class="form-group">
             <label for="empresa">Razão Social</label>
             <input type="text" class="form-control" id="empresa">
@@ -41,30 +41,19 @@
             <label for="email">E-mail</label>
             <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
           </div>
-          <!-- VERIFICAR SENHA -->
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha">
-          </div>
-          <div class="form-group">
-            <label for="senhatrue">Confirmação de senha</label>
-            <input type="password" class="form-control" id="senhatrue">
-          </div>
           <div class="form-group">
             <label for="resumo">Sua história</label>
             <textarea class="form-control" id="resumo" rows="8"></textarea>
           </div>
           <div class="form-group">
-              <label for="imagem">Imagem</label>
-              <input type="file" class="form-control-file" id="imagem">
+            <label for="imagem">Imagem</label>
+            <input type="file" class="form-control-file" id="imagem">
           </div>
-            <button type="submit" class="btn btn-lg btn-block" name="button">Cadastrar</button>
-            </form>
-          </div>
+          <button type="submit" class="btn btn-lg btn-block" name="button">Salvar</button>
+        </form>
       </div>
     </div>
-
-  </body>
-@include('footer')
-
+  </div>
+</body>
+@include ('footer')
 </html>
