@@ -49,16 +49,30 @@
               </svg>
             </a>
           </li>
-
+          @guest
           <li class="nav-item">
-            <a class="nav-link  font-weight-normal" href="../cadastro" style="color: white; font-weight: bold">CADASTRE-SE</a>
-          </li>
-        </ul>
+              <a class="nav-link  font-weight-normal" href="cadastro" >CADASTRE-SE</a>
+             </li>
+           @else
+           <li class ="nav-item ">
+                                    <a class="nav-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                            </li>
+                        @endguest
       </nav>
+
     </div>
 
   </header>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   </html
