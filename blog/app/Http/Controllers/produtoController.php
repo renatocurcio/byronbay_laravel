@@ -25,8 +25,10 @@ class produtoController extends Controller
         'photo' => 'required',
       ], $mensagem);
 
+      $timestamp = date_format(date_create(), 'YmdHism');
       $nomeImg = $request -> file('photo')->getClientOriginalName();
-      $save = $request -> file('photo')->storeAs("storage/img", $nomeImg);
+      $save = $request -> file('photo')->storeAs("public/img", $timestamp.$nomeImg);
+      $url='storage/img/'.$timestamp.$nomeImg;
 
       $produto = new product();
       $produto -> productName = $request -> productName;
@@ -34,19 +36,20 @@ class produtoController extends Controller
       $produto -> weight = $request -> weight;
       $produto -> grain = $request -> grain;
       $produto -> price = $request -> price;
-      $produto -> photo = $save;
-      // $novoProduto -> sellerId = $request -> sellerId;
+      $produto -> photo = $url;
+      // $produto -> sellerId = Auth::id();
 
       $resultado = $produto -> save();
 
-      return redirect()->action('produtoController@listarProdutos');
+      return view('produtores.meus_produtos', ['produtos'=>$produto]);
 
       // return view ("meus_produtos", ['resultado'=>$resultado]);
     }
 
     public function listarProdutos(){
       $produtos = product::paginate(10);
-      return view ('meus_produtos', ['produtos'=>$produtos]);
+      $produtor = seller::$id;
+      return view ('produtores.meus_produtos', ['produtos'=>$produtos, 'produtor'=>$produtor]);
     }
 
     public function editar(Request $request, product $produto){
@@ -60,20 +63,29 @@ class produtoController extends Controller
         'weight' => 'required',
         'grain' => 'required',
         'price' => 'required',
-        'photo' => 'required',
       ]);
 
-      $nomeImg = $request -> file('photo')->getClientOriginalName();
-      $save = $request -> file('photo')->storeAs("public/img", $nomeImg);
-      $urlImg = 'storage/img/'.$nomeImg;
+      if (isset($request['photo'])) {
+        $timestamp = date_format(date_create(), 'YmdHism');
+        $nomeImg = $request -> file('photo')->getClientOriginalName();
+        $save = $request -> file('photo')->storeAs("public/img", $timestamp.$nomeImg);
+        $url='storage/img/'.$timestamp.$nomeImg;
 
-      $produto -> productName = $request -> productName;
-      $produto -> description = $request -> description;
-      $produto -> weight = $request -> weight;
-      $produto -> grain = $request -> grain;
-      $produto -> price = $request -> price;
-      $produto -> photo = $save;
-      // $novoProduto -> sellerId = $request -> sellerId;
+        $produto -> productName = $request -> productName;
+        $produto -> description = $request -> description;
+        $produto -> weight = $request -> weight;
+        $produto -> grain = $request -> grain;
+        $produto -> price = $request -> price;
+        $produto -> photo = $url;
+        }
+
+         else {
+        $produto -> productName = $request -> productName;
+        $produto -> description = $request -> description;
+        $produto -> weight = $request -> weight;
+        $produto -> grain = $request -> grain;
+        $produto -> price = $request -> price;
+      }
 
       $resultado = $produto -> save();
 
@@ -82,7 +94,12 @@ class produtoController extends Controller
 
     public function deletar(Request $request, product $produto){
       $produto->delete();
-      return redirect()->action('produtoController@listarProdutos');
+      return redirect('produtores/meus_produtos');
     }
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     }

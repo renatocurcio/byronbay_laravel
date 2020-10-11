@@ -26,9 +26,8 @@ class sellers extends Migration
             $table->string('city',100);
             $table->string('state',2);
             $table->string('phoneCode1',2);
-            $table->string('phone',8);
-            $table->string('celPhonecode',2);
-            $table->string('celPhone',9);
+            $table->string('phone',9);
+            $table->string('description',500);
             $table->string('email',80);
             $table->string('password',30);
             $table->string('photo');

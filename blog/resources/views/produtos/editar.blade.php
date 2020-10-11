@@ -6,7 +6,7 @@
   <title>Editar produto</title>
 </head>
 <body>
-  <img src="../cafezinho.jpg" alt="padrao" width="100%" height="110w">
+  <img src="{{asset('cafezinho.jpg')}}" alt="padrao" width="100%" height="110w">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -29,8 +29,8 @@
           <div class="form-group">
             <label for="grain">Tipo</label>
             <select class="form-control" name="grain" value="{{$produto->grain}}">
-              <option value=true>Grãos</option>
-              <option value=false>Moído</option>
+              <option value="Grãos">Grãos</option>
+              <option value="Moído">Moído</option>
             </select>
           </div>
           <div class="form-group">
@@ -39,8 +39,8 @@
           </div>
           <div class="form-group">
             <label for="photo">Imagem</label>
-            <img src="{{$produto->photo}}" alt="">
-            <input type="file" class="form-control-file" name="photo" value="{{$produto->photo}}">
+            <input type="file" class="form-control-file" name="photo" value="{{($produto->photo)}}">
+            <img src="{{asset($produto->photo)}}" alt="">
           </div>
           <button type="submit" class="btn btn-lg btn-block" name="button">Salvar</button>
         </form>

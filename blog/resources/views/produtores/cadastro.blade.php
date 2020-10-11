@@ -6,7 +6,7 @@
     <title>Cadastro de produtores</title>
   </head>
   <body>
-<img src="../cafezinho.jpg" alt="padrao" width="100%" height="110w">
+<img src="{{asset('cafezinho.jpg')}}" alt="padrao" width="100%" height="110w">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">

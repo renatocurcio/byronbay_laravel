@@ -17,40 +17,35 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
 Route::get('/tipos', function () {
-    return view('infos/tipos');
+    return view('infos.tipos');
 });
 
 Route::get('/dicas', function () {
-    return view('infos/dicas');
+    return view('infos.dicas');
 });
 
 Route::get('/historia', function () {
-    return view('infos/historia');
+    return view('infos.historia');
 });
 
 Route::get('/quem_somos', function () {
-    return view('infos/quem_somos');
+    return view('infos.quem_somos');
 });
 
 Route::get('/fale_conosco', function () {
-    return view('infos/fale_conosco');
+    return view('infos.fale_conosco');
 });
 
-Route::get('/produtos', function () {
-    return view('produtos');
-});
-Route::get('/produtores', function () {
-    return view('produtores');
-});
+Route::get('/home', 'openController@home');
 
-Route::get('/produtor', function () {
-    return view('produtor');
-});
+Route::get('/produtos', 'openController@visualizarProdutos');
+
+Route::get('/produto/{id}','openController@verProduto');
+
+Route::get('/produtores', 'openController@visualizarProdutores');
+
+Route::get('/produtor/{id}', 'openController@verProdutor');
 
 Route::get('/carrinho', function () {
     return view('carrinho');
@@ -84,7 +79,7 @@ Route::post('/cad_ok', function () {
     return view('cad_ok');
 });
 
-Route::get('/meus_produtos', 'produtoController@listarProdutos');
+Route::get('/produtores/meus_produtos/{produtor}', 'produtoController@listarProdutos');
 
 Route::get('/produtos/cadastro', 'produtoController@cadastrar');
 Route::post('/produtos/cadastro', 'produtoController@cadastrar');
@@ -100,3 +95,11 @@ Route::post('/produtores/cadastro', 'produtoresController@cadastrar');
 Route::get('/produtores/dados', function(){
     return view('produtores.dados');
 });
+
+Route::get('/produtores/dados/{produtor}', 'produtoresController@visualizar');
+
+Route::get('/produtores/editar/{produtor}','produtoresController@editar');
+Route::post('/produtores/editar/{produtor}','produtoresController@atualizar');
+
+Route::get('/produtores/produtos/cadastro/{produtor}', 'produtoController@cadastrar');
+// Route::post('/produtores/produtos/cadastro/{produtor}', 'produtoController@cadastrar');

@@ -7,28 +7,21 @@
     <title>Nossos produtores</title>
   </head>
   <body>
-    <img src="cafezinho.jpg" alt="padrao" width="100%" height="110w">
+    <img src="{{asset('cafezinho.jpg')}}" alt="padrao" width="100%" height="110w">
     <div class="container">
       <h2 class="text-center">NOSSOS PRODUTORES</h2>
       <hr>
       <div class="row">
+        @foreach ($produtores as $produtor)
         <div class="col-4">
-          <a href="produtor">
-          <img src="prod1.jpg" alt="" width="100%" height="200w"></a>
-          <h4 class="text-center">Sr. João</h4>
+          <a href="/produtor/{{$produtor->id}}">
+          <img class="rounded mx-auto d-block" src="{{asset($produtor->photo)}}" alt="" width="90%" height="220w"></a>
+          <h4 class="text-center">{{$produtor->brandName}}</h4>
         </div>
-        <div class="col-4">
-          <a href="produtor">
-          <img src="prod2.jpg" alt="" width="100%" height="200w"></a>
-          <h4 class="text-center">Dona Maria</h4>
-        </div>
-        <div class="col-4">
-          <a href="produtor">
-          <img src="prod3.jpg" alt="" width="100%" height="200w"></a>
-          <h4 class="text-center">Paulão</h4>
-        </div>
+        @endforeach
       </div>
     </div>
+    {{$produtores->links("pagination::bootstrap-4")}}
   </body>
   @include('footer')
 </html>

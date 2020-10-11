@@ -19,9 +19,8 @@ class products extends Migration
             $table->string('productName',100);
             $table->longText('description', 500);
             $table->integer('weight');
-            $table->boolean('grain');
-            $table->string('number',10);
-            $table->decimal('price',2);
+            $table->string('grain',20);
+            $table->decimal('price');
             $table->string('photo');
             $table->integer('sellerId');
         });

@@ -6,15 +6,15 @@
   <title>Bem-vindo</title>
 </head>
 <body>
-  <img src="../cafezinho.jpg" alt="padrao" width="100%" height="110w">
+  <img src="{{asset('cafezinho.jpg')}}" alt="padrao" width="100%" height="110w">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-8">
         <div class="alert alert-success" role="alert">
-          <h3 class="alert-heading">Bem-vindo, {{$user ?? ''}}!</h3>
+          <h3 class="alert-heading">Bem-vindo, {{$user -> brandName}}!</h3>
           <p>Cadastro realizado com sucesso!!</p>
         </div>
-        <a class="float-right" href="dados" style="color:black"><h5>Ver meus dados</h5></a>
+        <a class="float-right" href="dados/{{$user->id}}" style="color:black"><h5>Ver meus dados</h5></a>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
   <title>Meus produtos</title>
 </head>
 <body>
-  <img src="cafezinho.jpg" alt="padrao" width="100%" height="110w">
+  <img src="{{asset('cafezinho.jpg')}}" alt="padrao" width="100%" height="110w">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -32,8 +32,8 @@
             @endforeach
           </tbody>
         </table>
-        <!-- {{$produtos->links()}} -->
-        <a href="/dados_produtor" class="btn" type="button" name="button">Voltar</a>
+        {{$produtos->links("pagination::bootstrap-4")}}
+        <a href="../home" class="btn" type="button" name="button">Voltar</a>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@
         </ul>
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/byronbaycoffeeplace/"><img src="../instagram.png" alt="instagram" width="25w" height="25w">
+            <a class="nav-link" href="https://www.instagram.com/byronbaycoffeeplace/"><img src="{{asset('instagram.png')}}" alt="instagram" width="25w" height="25w">
             </a>
           </li>
         </ul>
